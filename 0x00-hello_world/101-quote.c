@@ -4,7 +4,7 @@
 /**
  * main - main function
  *
- * Return: 0 on successful entry
+ * Return: o on success 
  */
 
 int main(void)
