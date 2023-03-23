@@ -1,13 +1,23 @@
-#include <unistd.h>
+#include <stdio.h>
+#include "main.h"
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
+ * print_most_numbers - prints numbers except 2 and 4
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Return: returns nothing
  */
-int _putchar(char c)
+
+void print_most_numbers(void)
 {
-	return (write(1, &c, 1));
+	char n;
+
+	for (n = '0'; n <= '9'; n++)
+	{
+		if ((n == '2') || (n == '4'))
+		{
+			continue;
+		}
+		putchar(n);
+	}
+	putchar('\n');
 }
