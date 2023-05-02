@@ -12,7 +12,7 @@ size_t free_listint_safe(listint_t **h)
 	size_t Counter_l = 0;
 	int data_d;
 
-	if (h == NULL || *h == NULL)
+	if (!h || !*h)
 		return (0);
 
 	while (*h)
@@ -25,12 +25,6 @@ size_t free_listint_safe(listint_t **h)
 			*h = temp;
 			Counter_l++;
 		}
-		else if (data_d < 0)
-		{
-			/* To make it more robust */
-			printf("Error: There is a loop reference\n");
-			return (Counter_l);
-		}
 		else
 		{
 			free(*h);
@@ -39,6 +33,8 @@ size_t free_listint_safe(listint_t **h)
 			break;
 		}
 	}
+
+	*h = NULL;
 
 	return (Counter_l);
 }
