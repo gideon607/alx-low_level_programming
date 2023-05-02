@@ -1,7 +1,6 @@
 #include "lists.h"
 /**
- * coding done by self .
- * listint_len - function for the task.
+ * listint_len - this is for the task to list the elements..
  * @h: the constant linked list appiled.
  *
  * Return: number of nodess.
