@@ -12,7 +12,6 @@ void free_listint(listint_t *head)
 	{
 		temp_pointer = head->next;
 		free(head);
-
 		head = temp_pointer;
 		free(temp_pointer);
 	}
