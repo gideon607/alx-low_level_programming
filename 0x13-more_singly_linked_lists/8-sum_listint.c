@@ -7,15 +7,15 @@
  */
 int sum_listint(listint_t *head)
 {
-	int sumall = 0;
-	listint_t *pointer_n;
+	 int sumall = 0;
 
-	while (pointer_n)
-	{
-		sumall += pointer_n->n;
-		pointer_n = pointer_n->next;
-	}
+	 while (head)
+	 {
+		sumall += head->n;
+		head = head->next;
+		}
 
-	return (sumall);
+    return sumall;
 }
+
 
