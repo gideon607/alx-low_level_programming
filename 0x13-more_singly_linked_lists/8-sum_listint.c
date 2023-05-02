@@ -8,13 +8,12 @@
 int sum_listint(listint_t *head)
 {
 	int sumall = 0;
-	listint_t *head;
+	listint_t *pointer_n;
 
-	while (temp)
+	while (pointer_n)
 	{
-		sumall += temp->n;
-
-		temp = temp->next;
+		sumall += pointer_n->n;
+		pointer_n = pointer_n->next;
 	}
 
 	return (sumall);
