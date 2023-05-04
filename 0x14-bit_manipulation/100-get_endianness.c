@@ -10,8 +10,8 @@ int get_endianness(void)
     char *c = (char *)&ine;
 
     if (*c)
-        return 1; // that is a Little endian machine
+        return 1; /* that is a Little endian machine */
     else
-        return 0; // that is a Big endian machine.
+        return 0; /* that is a Big endian machine.*/
 }
 
