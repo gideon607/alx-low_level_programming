@@ -6,12 +6,12 @@
  */
 int get_endianness(void)
 {
-    unsigned int ine = 1;
-    char *c = (char *)&ine;
+	unsigned int ine = 1;
+	char *c = (char *)&ine;
 
-    if (*c)
-        return 1; /* that is a Little endian machine */
-    else
-        return 0; /* that is a Big endian machine.*/
+	if (*c)
+		return (1); /* that is a Little endian machine */
+	else
+		return (0); /* that is a Big endian machine.*/
 }
 
