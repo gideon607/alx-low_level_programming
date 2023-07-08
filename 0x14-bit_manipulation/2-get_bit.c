@@ -8,6 +8,15 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	return ((index > 63) ? -1 : (n >> index) & 1);
+	if (index > 63)
+	{
+		return (-1);
+	}
+
+	unsigned long int mark = 1UL << index;
+	int bit_val = (n & mark) != 0;
+
+	return (bit_val);
 }
+
 
